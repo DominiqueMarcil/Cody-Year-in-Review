@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.navbar ul li a {
+    padding: 10px 60px;
+    text-decoration: none;
+    color: black;
+    font-family: 'bebas neue';
+    font-stretch: expanded;
+}
+.navbar ul li a:hover {
+    border-bottom: 2px solid #871111;
+}
+
+
+
+/* homepage section */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+}
+
+    
+
+
+.homeimg {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    max-width: 80%;
+}
+
+
+
+.home h1 {
+    font-size: 50px;
+    color:black;
+    text-align: center;
+    font-family:'bebas neue';
+}
+
+/* about section */
+#about {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+#about h1{
+    margin: 15px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'bebas neue';
+}
+.about {
+    display: flex;
+   align-items: center;
+
+}
+.about img{
+    display: flex;
+    max-width: 40%;
+    margin: 50px;
+}
+.aboutp {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    max-width: 60%;
+    padding-right: 40px;
+    text-align: left;
+    font-size: 20px;
+}
+.aboutp h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* opportunities section */
+#opportunities {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.opportunities-container h1{
+    margin: 60px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'bebas neue';
+}
+.columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.box {
+    height: auto;
+    max-width: 500px;
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 50px ;
+}
+
+.box h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.box p {
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
+    align-items: center;
+}
+
+
+/* portfolio section */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.gallery {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.gallerygrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+.gallery img {
+   width: auto;
+   height: 40vw;
+}
+
+.gallery img:hover {
+    background-color: black;
+    cursor: pointer;
+}
+#portfolio h1{
+    margin: 60px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'bebas neue';
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 1000px) {
+  
+    .navbar {
+      height: auto;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .navbar ul li a {
+      padding: 10px 0;
+      display: block;
+    }
+  
+   
+    h1 {
+      font-size: 30px;
+    }
+  
+    .home h1 {
+      font-size: 30px;
+    }
+  
+   
+    #about h1 {
+      font-size: 30px;
+    }
+  
+    .about {
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    .about img {
+      max-width: 50%;
+      margin: 0;
+    }
+  
+    .aboutp {
+      max-width: 90%;
+      padding-right: 0;
+      margin: 20px 0;
+    }
+  
+    .aboutp h2 {
+      font-size: 24px;
+    }
+    .box p {
+        font-size: 15px;
+      }
+}
+
+
+@media (max-width: 768px) {
+  
+    .navbar {
+      height: auto;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+    
+      padding: 10px 0;
+    }
+  
+    .navbar ul li a {
+      padding: 10px 0;
+      display: block;
+    }
+  
+   
+    h1 {
+      font-size: 30px;
+    }
+  
+    .home h1 {
+      font-size: 30px;
+    }
+  
+   
+    #about h1 {
+      font-size: 30px;
+    }
+  
+    .about {
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    .about img {
+      max-width: 50%;
+      margin: 0;
+    }
+  
+    .aboutp {
+      max-width: 90%;
+      padding-right: 0;
+      margin: 20px 0;
+      font-size: 12px;
+    }
+  
+    .aboutp h2 {
+      font-size: 15px;
+    }
+  
+    #opportunities h1 {
+      font-size: 30px;
+    }
+  
+    .columns {
+      grid-template-columns: 1fr;
+    }
+  
+    .box {
+      max-width: 90%;
+    }
+  
+    .box h2 {
+      font-size: 20px;
+    }
+  
+    .box p {
+      font-size: 12px;
+    }
+  
+    #portfolio h1 {
+      font-size: 30px;
+    }
+  
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+}
